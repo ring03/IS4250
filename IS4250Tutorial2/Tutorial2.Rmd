@@ -2,7 +2,7 @@
 title: "Tutorial2"
 author: "ring03"
 date: "29 January 2016"
-output: _document
+output: md_document
 ---
 ```{r, message=FALSE, echo=FALSE}
 library(ggplot2)
@@ -17,4 +17,8 @@ pie(slices, labels = lbls, main="Pie Chart of Service Satisfaction")
 summary(labs$WaitTime)
 p <- ggplot(data=labs, aes(labs$WaitTime)) + geom_histogram()
 ggplot(data=labs, aes(labs$WaitTime)) + geom_histogram()
+
+ggplot(data=labs, aes(x=labs$AGE, fill=labs$SvcSat)) + geom_bar(stat="count")
+
+ggplot(data=labs, aes(x=labs$Gender, fill=labs$SvcSat)) + geom_bar(stat="count")
 ```
