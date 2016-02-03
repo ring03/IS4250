@@ -1,0 +1,20 @@
+---
+title: "Tutorial2"
+author: "ring03"
+date: "29 January 2016"
+output: _document
+---
+```{r, message=FALSE, echo=FALSE}
+library(ggplot2)
+```
+
+```{r, echo=FALSE}
+summary(labs$SvcSat)
+slices <- c(25, 126)
+lbls <- c("N = 25", "Y = 126")
+pie(slices, labels = lbls, main="Pie Chart of Service Satisfaction")
+
+summary(labs$WaitTime)
+p <- ggplot(data=labs, aes(labs$WaitTime)) + geom_histogram()
+ggplot(data=labs, aes(labs$WaitTime)) + geom_histogram()
+```
